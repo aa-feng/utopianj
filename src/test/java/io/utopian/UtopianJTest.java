@@ -41,5 +41,10 @@ public class UtopianJTest {
     assertNotNull(sponsors.getJSONArray("results").getJSONObject(0).getString("account"));
   }
 
+  @Test
+  public void testIsSponsor() {
+    assertTrue(UtopianJ.isSponsor("espoem"));
+  }
+
 
 }

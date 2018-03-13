@@ -62,7 +62,11 @@ public class UtopianJ {
    * check if an account is a sponsor
    */
   public static boolean isSponsor(String account) {
-
+    JSONArray sponsors = getSponsors().getJSONArray("results");
+    for (int i=0; i<sponsors.length(); i++) {
+      if(account.equals(sponsors.getJSONObject(i).getString("account")))
+        return true;
+    }
     return false;
   }
 
