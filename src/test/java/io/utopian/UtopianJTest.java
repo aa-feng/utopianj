@@ -25,7 +25,7 @@ public class UtopianJTest {
   }
 
   @Test
-  public void testModerators() {
+  public void testGetModerators() {
     JSONObject moderators = UtopianJ.getModerators(); 
     assertNotNull(moderators.getJSONArray("results").getJSONObject(0).getString("account"));
   }
@@ -33,6 +33,12 @@ public class UtopianJTest {
   @Test
   public void testIsModerator() {
     assertTrue(UtopianJ.isModerator("espoem"));
+  }
+
+  @Test
+  public void testGetSponsors() {
+    JSONObject sponsors = UtopianJ.getSponsors();
+    assertNotNull(sponsors.getJSONArray("results").getJSONObject(0).getString("account"));
   }
 
 

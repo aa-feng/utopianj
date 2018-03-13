@@ -42,9 +42,8 @@ public class UtopianJ {
   /**
    * return sponsor list as a JSON string
    */
-  public static String getSponsors() {
-
-    return null;
+  public static JSONObject getSponsors() {
+    return connect("sponsors",null);
   }  
 
   /**
