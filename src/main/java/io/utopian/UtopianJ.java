@@ -6,6 +6,7 @@ import com.sun.jersey.api.client.WebResource;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.MultivaluedHashMap;
 import org.json.JSONObject;
+import org.json.JSONArray;
 
 /**
  * Utopian API Java Client
@@ -35,8 +36,6 @@ public class UtopianJ {
    * return moderator lists as a JSON string
    */
   public static JSONObject getModerators() {
-    //MultivaluedMap<String,String> params = new MultivaluedHashMap<String,String>();
-    //params.add("limit", "1");
     return connect("moderators",null);
   }
 
@@ -52,7 +51,11 @@ public class UtopianJ {
    * check if an account is a moderator
    */
   public static boolean isModerator(String account) {
-
+    JSONArray moderators = getModerators().getJSONArray("results");
+    for (int i=0; i<moderators.length(); i++) {
+      if(account.equals(moderators.getJSONObject(i).getString("account")))
+        return true;
+    }
     return false;
   }
 

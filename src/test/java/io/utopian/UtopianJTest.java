@@ -1,10 +1,13 @@
 package io.utopian;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import static org.junit.Assert.*;
+
+import java.util.*;
+import org.json.JSONObject;
+import org.json.JSONArray;
 
 /**
  * Unit test for UtopianJ.
@@ -23,7 +26,13 @@ public class UtopianJTest {
 
   @Test
   public void testModerators() {
-    System.out.println(UtopianJ.getModerators());
+    JSONObject moderators = UtopianJ.getModerators(); 
+    assertNotNull(moderators.getJSONArray("results").getJSONObject(0).getString("account"));
+  }
+
+  @Test
+  public void testIsModerator() {
+    assertTrue(UtopianJ.isModerator("espoem"));
   }
 
 
