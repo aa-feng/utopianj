@@ -33,14 +33,14 @@ public class UtopianJ {
 
 
   /**
-   * return moderator lists as a JSON string
+   * return moderators as a JSONObject
    */
   public static JSONObject getModerators() {
     return connect("moderators",null);
   }
 
   /**
-   * return sponsor list as a JSON string
+   * return sponsors as a JSONObject
    */
   public static JSONObject getSponsors() {
     return connect("sponsors",null);
@@ -73,13 +73,12 @@ public class UtopianJ {
   /** 
    * return Utopian posts determined by the query parameters
    */
-  public static String getPosts(MultivaluedMap<String,String> params) {
-
-    return null;
+  public static JSONObject getPosts(MultivaluedMap<String,String> params) {
+    return connect("posts", params);
   }
 
   /**
-   * return a post String 
+   * return a post JSONObject 
    */
   public static String getPost(String author, String permlink) {
 

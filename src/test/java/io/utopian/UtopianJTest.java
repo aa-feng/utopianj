@@ -9,6 +9,9 @@ import java.util.*;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.MultivaluedHashMap;
+
 /**
  * Unit test for UtopianJ.
  */
@@ -44,6 +47,14 @@ public class UtopianJTest {
   @Test
   public void testIsSponsor() {
     assertTrue(UtopianJ.isSponsor("espoem"));
+  }
+
+  @Test
+  public void testGetPosts() {
+    MultivaluedMap<String,String> params = new MultivaluedHashMap<String,String>();
+    params.add("limit","1");
+    JSONObject posts = UtopianJ.getPosts(params);
+    assertNotNull(posts.getJSONArray("results").getJSONObject(0).getString("author"));
   }
 
 
