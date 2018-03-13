@@ -80,9 +80,8 @@ public class UtopianJ {
   /**
    * return a post JSONObject 
    */
-  public static String getPost(String author, String permlink) {
-
-    return null;
+  public static JSONObject getPost(String author, String permlink) {
+    return connect("posts/"+author+"/"+permlink, null);
   }
 
   /**

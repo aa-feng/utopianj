@@ -57,5 +57,10 @@ public class UtopianJTest {
     assertNotNull(posts.getJSONArray("results").getJSONObject(0).getString("author"));
   }
 
+  @Test
+  public void testGetPost() {
+    assertNotNull(UtopianJ.getPost("espoem","sidebar-in-the-post-jumps-to-the-top-of-the-page").getString("title"));
+  }
+
 
 }
