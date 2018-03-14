@@ -67,5 +67,10 @@ public class UtopianJTest {
     assertNotNull(UtopianJ.getStats());
   }
 
+  @Test
+  public void testIsVoting() {
+    boolean isVoting = UtopianJ.isVoting();
+    assertTrue(isVoting==true||isVoting==false);
+  }
 
 }

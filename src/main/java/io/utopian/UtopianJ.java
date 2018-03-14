@@ -95,8 +95,7 @@ public class UtopianJ {
    * check if Bot is voting
    */
   public static boolean isVoting() {
-
-    return false;
+    return getStats().getJSONObject("stats").getBoolean("bot_is_voting");
   }
 
 }
