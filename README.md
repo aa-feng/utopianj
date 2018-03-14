@@ -13,22 +13,30 @@ MIT
 ## Features
 
 List moderators
+
 List sponsors
+
 Check if an user is a moderator
+
 Check if an user is a sponsor
+
 Get all posts satisfying given criteria
+
 Get a particular post information
+
 Check Utopian bot stats
+
 Check if Utopian bot is voting
 
 ## Test
 
 All provided methods are tested with JUnit test cases:
+
 https://github.com/aa-feng/utopianj/blob/master/src/test/java/io/utopian/UtopianJTest.java
 
 ## How to use it?
 
-This project is managed by Maven. After git clone this project to your PC, run the following commands:
+This project is managed by Maven. After git clone this project to your PC, assuming you have installed Maven, then run the following commands:
 
 ### Install this project to your local Maven repository
 
@@ -72,8 +80,11 @@ UtopianJ.isVoting()
 ## Roadmap
 
 The following features will be added:
+
 * More information about moderators, e.g. payouts, 
+
 * Information about Utopian categories
+
 * Add relevant Java class, e.g. Moderator, Category, Post, to make this tool more Developer friendly
 
 ## How to contribute
