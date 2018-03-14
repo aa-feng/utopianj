@@ -1,4 +1,4 @@
-package io.utopian;
+package com.aafeng;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
