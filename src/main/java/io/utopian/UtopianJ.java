@@ -87,9 +87,8 @@ public class UtopianJ {
   /**
    * return the current status of utopian.io
    */
-  public static String getStats() {
-
-    return null;
+  public static JSONObject getStats() {
+    return connect("stats", null);
   }
 
   /**

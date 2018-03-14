@@ -62,5 +62,10 @@ public class UtopianJTest {
     assertNotNull(UtopianJ.getPost("espoem","sidebar-in-the-post-jumps-to-the-top-of-the-page").getString("title"));
   }
 
+  @Test
+  public void testGetStatus() {
+    assertNotNull(UtopianJ.getStats());
+  }
+
 
 }
