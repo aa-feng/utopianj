@@ -59,6 +59,20 @@ public class UtopianJ {
   }
 
   /**
+   * check if an account is a supervisor
+   */
+  public static boolean isSupervisor(String account) {
+    JSONArray moderators = getModerators().getJSONArray("results");
+    for (int i=0; i<moderators.length(); i++) {
+      if(account.equals(moderators.getJSONObject(i).getString("account")) &&
+         moderators.getJSONObject(i).getBoolean("supermoderator"))
+        return true;
+    }
+    return false;
+  }
+
+
+  /**
    * check if an account is a sponsor
    */
   public static boolean isSponsor(String account) {

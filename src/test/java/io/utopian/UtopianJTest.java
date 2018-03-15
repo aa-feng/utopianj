@@ -39,6 +39,11 @@ public class UtopianJTest {
   }
 
   @Test
+  public void testIsSupervisor() {
+    assertTrue(UtopianJ.isSupervisor("espoem"));
+  }
+
+  @Test
   public void testGetSponsors() {
     JSONObject sponsors = UtopianJ.getSponsors();
     assertNotNull(sponsors.getJSONArray("results").getJSONObject(0).getString("account"));
