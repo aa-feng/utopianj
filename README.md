@@ -52,7 +52,7 @@ Add this project in your pom.xml, e.g.:
     <dependency>
       <groupId>com.aafeng</groupId>
       <artifactId>utopianj</artifactId>
-      <version>1.0</version>
+      <version>0.1</version>
     </dependency>
 ```
 
